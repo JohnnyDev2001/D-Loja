@@ -1,9 +1,23 @@
 {% extends 'shop/layout/main.html' %}
 
+{% load static %}
+
 {% block links %}
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
 {% endblock links %}
 
 {% block content %}
     {% include 'shop/inc/navbar.html' %}
+
+    {% include 'shop/inc/search.html' %}
+
+    {% include 'shop/inc/slide.html' %}
+
+    {% include 'shop/inc/about.html' %}
+
 {% endblock content %}
+
+{% block scripts %}
+    <!-- link do js -->
+    <script src="{% static 'js/script.js' %}"></script>
+{% endblock scripts %}

@@ -11,6 +11,7 @@ def getFileName(request, filename):
 class Menu(models.Model):
     name = models.CharField(max_length=150, null=False, blank=False)
     image = models.ImageField(upload_to=getFileName, null=True, blank=False)
+    price = models.CharField(max_length=30, default='00.00', null=False, blank=False)
     description=models.TextField(max_length=500, null=False, blank=False)
     vote = models.CharField(max_length=10)
     show = models.BooleanField(default=False)
@@ -22,6 +23,7 @@ class Menu(models.Model):
 class MenuBar(models.Model):
     name = models.CharField(max_length=150, null=False, blank=False)
     image = models.ImageField(upload_to=getFileName, null=True, blank=False)
+    price = models.CharField(max_length=30, default='00.00', null=False, blank=False)
     description=models.TextField(max_length=500, null=False, blank=False)
     vote = models.CharField(max_length=10)
     show = models.BooleanField(default=False)
